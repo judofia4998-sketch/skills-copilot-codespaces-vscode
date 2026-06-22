@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio & Academic Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Student Portfolio & Academic Management</h1>
+    <p class="subtitle">Responsive dashboard with role-based access</p>
+  </header>
+
+  <main class="container">
+    <section id="auth-card" class="card">
+      <h2>Login</h2>
+      <form id="login-form" class="grid-form">
+        <label>
+          Username
+          <input id="username" type="text" required>
+        </label>
+        <label>
+          Password
+          <input id="password" type="password" required>
+        </label>
+        <button type="submit">Sign In</button>
+      </form>
+      <p class="hint">Try admin/admin123 or student/student123</p>
+      <p id="login-message" class="message"></p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="card dashboard-header">
+        <div>
+          <h2>Welcome, <span id="user-name"></span></h2>
+          <p>Role: <strong id="user-role"></strong></p>
+        </div>
+        <button id="logout-btn" class="secondary">Logout</button>
+      </div>
+
+      <div class="layout-grid">
+        <section class="card">
+          <h3>Student Profile</h3>
+          <form id="profile-form" class="grid-form">
+            <label>
+              Full Name
+              <input id="profile-name" type="text" required>
+            </label>
+            <label>
+              Email
+              <input id="profile-email" type="email" required>
+            </label>
+            <label>
+              Program
+              <input id="profile-program" type="text" required>
+            </label>
+            <label>
+              Bio
+              <textarea id="profile-bio" rows="3" required></textarea>
+            </label>
+            <button type="submit">Save Profile</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h3>Portfolio Projects</h3>
+          <form id="project-form" class="grid-form">
+            <input id="project-id" type="hidden">
+            <label>
+              Title
+              <input id="project-title" type="text" required>
+            </label>
+            <label>
+              Description
+              <textarea id="project-description" rows="2" required></textarea>
+            </label>
+            <label>
+              Technologies
+              <input id="project-tech" type="text" placeholder="HTML, CSS, JS" required>
+            </label>
+            <label>
+              Link
+              <input id="project-link" type="url" placeholder="https://example.com">
+            </label>
+            <button type="submit">Save Project</button>
+          </form>
+          <div id="project-list" class="list"></div>
+        </section>
+
+        <section class="card full-width">
+          <h3>Academic Records</h3>
+          <form id="record-form" class="grid-form compact">
+            <input id="record-id" type="hidden">
+            <label>
+              Course
+              <input id="record-course" type="text" required>
+            </label>
+            <label>
+              Semester
+              <input id="record-semester" type="text" placeholder="Fall 2026" required>
+            </label>
+            <label>
+              Grade
+              <input id="record-grade" type="text" placeholder="A, B+, etc." required>
+            </label>
+            <label>
+              Credits
+              <input id="record-credits" type="number" min="1" max="10" required>
+            </label>
+            <button type="submit">Save Record</button>
+          </form>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Semester</th>
+                  <th>Grade</th>
+                  <th>Credits</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="record-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
