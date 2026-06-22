@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio | Academic Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <h1 class="logo">Alex Carter</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="planner.html">Academic Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Academic Planner</h2>
+      <form id="planner-form" class="inline-form">
+        <label for="task-input">Add New Task</label>
+        <input id="task-input" type="text" placeholder="e.g. Prepare for Data Structures quiz" required>
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
