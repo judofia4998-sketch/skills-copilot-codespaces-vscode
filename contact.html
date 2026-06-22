@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <h1 class="logo">Alex Carter</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Academic Planner</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text">
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email">
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="form-feedback" class="feedback" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
